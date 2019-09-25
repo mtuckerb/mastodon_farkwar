@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     mastodon_farkwar (0.1.0)
+      dotenv
       rails (~> 5.2.3)
       rest-client
 
@@ -57,6 +58,7 @@ GEM
     crass (1.0.4)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.5)
     erubi (1.8.0)
     ffi (1.11.1)
     formatador (0.2.5)
@@ -162,6 +164,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.4.1)
     thor (0.20.3)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -183,6 +186,7 @@ DEPENDENCIES
   guard-rails
   m
   mastodon_farkwar!
+  sqlite3
 
 BUNDLED WITH
    2.0.1

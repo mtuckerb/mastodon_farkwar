@@ -6,7 +6,7 @@ module MastodonFarkwar
 
     setup do
       @authentication = {psk: 'test'}
-      @params = {user: {email: 't@t.com', password: 'testpw'}}.merge @authentication
+      @params = {user: {email: 't@t.com', password: 'testpw',agreement: true, locale: 'en', username: 'bloop'}}.merge @authentication
     end
 
     test "403 without psk" do
@@ -16,7 +16,7 @@ module MastodonFarkwar
     
     test "create user" do
       post users_url, params: @params
-      assert(User.find_by(email: 't@t.com'))
+      assert(Account.find_by(email: 't@t.com'))
     end
   end
 end

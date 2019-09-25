@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @account.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @account.password %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @account.locale %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @account.email %>
+</p>
+
+<p>
+  <strong>Agreement:</strong>
+  <%= @account.agreement %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 5.2.3"
   spec.add_dependency "rest-client"
   spec.add_dependency "dotenv"
+  spec.add_dependency "awesome_print"
 
   spec.add_development_dependency "m"
   spec.add_development_dependency "sqlite3"

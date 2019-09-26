@@ -7,7 +7,7 @@ module MastodonFarkwar
     def create
       token = ::AppSignUpService.new.call(app, params)
       user = ::Account.find_by(domain: nil, username: user_params[:username])&.user
-      user.confirmed_at = Time.now
+      user.confirm
       if user.save
         render json: user.to_json
       else

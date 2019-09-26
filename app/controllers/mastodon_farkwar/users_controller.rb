@@ -5,7 +5,7 @@ module MastodonFarkwar
     skip_before_action :verify_authenticity_token
   
     def create
-      token = ::AppSignupService.new.call(app, params)
+      token = ::AppSignUpService.new.call(app, params)
       user = ::Account.find_by(domain: nil, username: user_params[:username])&.user
       user.confirmed_at = Time.now
       if user.save

@@ -6,10 +6,10 @@ module MastodonFarkwar
   
     def create
       token = ApplicationSignupService.new.call(app, params)
-      account = Account.find_by(domain: nil, username: user_params[:username])
-      account.user.confirmed_at = Time.now
-      if account.save
-        render json: account.to_json
+      user = Account.find_by(domain: nil, username: user_params[:username])&.user
+      user.confirmed_at = Time.now
+      if user.save
+        render json: user.to_json
       else
         render json: {errors: [{message: 'Account could not be saved'}]}
       end

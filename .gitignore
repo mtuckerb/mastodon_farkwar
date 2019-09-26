@@ -1,5 +1,6 @@
 .bundle/
 .env
+test/dummy
 log/*.log
 pkg/
 test/dummy/db/*.sqlite3
